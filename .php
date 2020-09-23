@@ -6,11 +6,11 @@ $app_domain = 'students.test';
 ## DATABASE SETTINGS ##
 $db_host = 'localhost';
 $db_user = 'root';
-$db_pass = 'qSmU9JdK3kdx4W2';
+$db_pass = 'password';
 $db_name = 'students';
 
 ## APPLICATION URL and URI ##
-$uri = 'C:\xampp\htdocs\classroom\students_no_frmw';
+$uri = 'C:\xampp\htdocs\students';
 $url = 'http://students.test';
 
 ## local or production environment ##
