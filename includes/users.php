@@ -1,5 +1,9 @@
 <div class="d-flex justify-content-center">
-<h3 class="mr-3 text-primary"><?php print $board->name; ?> /</h3>
+    <h3>
+        <a href="/board/<?php print $board->id; ?>">
+            <?php print $board->name; ?>
+        </a>
+    / </h3>
 <h3><?php print $student->name; ?></h3>
 </div>
 <table class="table table-striped">

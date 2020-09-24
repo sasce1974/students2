@@ -52,11 +52,16 @@ class ErrorManagement
     }
 
 
-    function errorMessage($e, $user_message = null){
+    function errorMessage($e = null, $user_message = null){
 
         if($this->debug){
-            error_log("Error: ". $e->getMessage() . " in file: " . $e->getFile() . " at line: " . $e->getLine());
-            $_SESSION['error'] = "Error: ". $e->getMessage() . " in file: " . $e->getFile() . " at line: " . $e->getLine();
+            if($e === null){
+                error_log("Error: ". $user_message);
+                $_SESSION['error'] = "Error: ". $user_message;
+            }else {
+                error_log("Error: " . $e->getMessage() . " in file: " . $e->getFile() . " at line: " . $e->getLine());
+                $_SESSION['error'] = "Error: " . $e->getMessage() . " in file: " . $e->getFile() . " at line: " . $e->getLine();
+            }
         }else{
             $_SESSION['error'] = "A system error occurred. We apologize for the inconvenience. " . $user_message;
         }

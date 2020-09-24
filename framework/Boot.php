@@ -13,6 +13,7 @@ class Boot
     function __construct()
     {
         $this->error = new ErrorManagement();
+        if(!defined('DB_NAME') || DB_NAME == '') $this->error->errorMessage(null,'Database not configured');
         $this->connect();
     }
 
