@@ -5,8 +5,8 @@ $app_domain = 'students.test';
 
 ## DATABASE SETTINGS ##
 $db_host = 'localhost';
-$db_user = 'root';
-$db_pass = 'qSmU9JdK3kdx4W2';
+$db_user = 'user';
+$db_pass = 'secret';
 $db_name = 'students';
 
 ## APPLICATION URL and URI ##
